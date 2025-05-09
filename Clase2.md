@@ -50,4 +50,25 @@ Ejemplo:
 
 ![](imagenes/ejemplogitlog.png)
 
+## **¿Que es una rama?**
 
+Una rama es una linea de desarrollo independiente o una version de el repositorio. al ser una bifurcacion de nuestra rama principal nos permite relizar cambios manteniendolos en esa rama y separandolas de los demas, esto hace posible el desarrollo en paralelo sin afectar a las demas ramas o a la rama principal.
+
+Debemos tomar en cuenta que cuando vallamos a realizar cambios por mas pequeños que sean se debe crea una rama para asi encapsular dichos cambios, estos cambios tambien se podran unir a la rama principal una vez el trabajo este realizado.
+
+![](imagenes/ramas.png)
+
+## **¿Como creamos una rama?**
+ Para la creacion de una rama debemos realizar el siguiente comando:
+ 
+ - **git branch rama_nombre de la rama**
+  
+Esto nos generara una rama mas no nos cambia de rama. 
+## **¿Entonces como cambiamos de rama?**
+ Para cambiar de rama tenemos 2 opciones de comando:
+
+ - **git checkout rama_nombre de la rama**
+ - **git switch rama_nombre de la rama**
+  
+  De estas dos opciones la se recomienda el uso de git switch, ya que git checkout tiene mas funciones además de cambiar de rama. Tambien es recomendable que despues del cambio de rama se realice un git log para que te muestre el HEAD y así asegurarse de que estás en la rama que deses.
+  
