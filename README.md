@@ -282,3 +282,70 @@ Para porder subir los cambios a nuestro repositorio remoto usamos el **push**, u
   ## **Diferencias entre git push y git pull**
 
   - **Git push.** Nos sirve para empujar cualquier cambio realizado del repositorio local al repositorio remoto.
+
+Algunos comandos son:
+  
+  |Comandos |Función|
+  |--------|:------|
+  |git push| Sube los cambios confirmados (commits) de tu repositorio local al repositorio remoto. |
+  |git push --all| Sube todas las ramas del repositorio local al remoto.|
+  |git push -f| Fuerza la subida, sobrescribiendo el historial remoto con tu historial local.|
+  |git push -u origin < rama >|Sube la rama y la establece como predeterminada para futuros push y pull.|
+  |git push -d origin|Elimina la rama del repositorio remoto origin.|
+  |git push origin < rama1 > < rama2 > < ramaN >| Sube varias ramas (rama, rama1, rama2, ..., ramaN) al remoto origin en un solo comando.|
+ 
+ - **Git pull.** Nos sirve para descargar los cambios o modificaciones de el repositorio remoto al repositorio local.
+  
+  Algunos comandos son:
+
+  |Comandos |Función|
+  |--------|:------|
+  |git pull| Descarga los cambios del repositorio remoto y los fusiona con tu rama actual. |
+  |git git pull --set-upstream origin < rama >|Establece la rama remota como la predeterminada para pull y descarga sus cambios.|
+  |git pull --all| Descarga cambios de todos los remotos configurados, pero no fusiona ramas automáticamente.| 
+  
+## **Experimentos en git pull**
+- ### **Experimento 1**
+  - Traertodo los cambios a tu rama actual
+  Para traer todos los cambios de una rama usamos el siguiente comando:
+
+    - **Git pull origin < Nombre_de_la_rama >**
+  
+  - Traer los cambios de varias ramas a una sola, usamos el  comando (Se hace paso a paso):
+  
+    -  **git checkout mi-rama**
+
+       **git merge rama1**
+       
+       **git merge rama2**
+       
+       **git merge rama3**
+
+  - Traerme los cambios solo con pull, con el siguiente comando:
+  
+    - **git pull**
+  
+## **Pull Request**
+Un Pull Request (PR) es una peticion de cambios que se envia al repositorio original.
+
+**¿Como se hace un PR?**
+ 
+ Tenemos 2 opciones:
+
+  1. - La rama aparece en < CODE > ya que la subiste recientemente
+     - Darle un titulo y una descripción.
+     - Git Hub hara verificaciones y si no hay conflictos tu solicitud procedera.
+  
+  2. - Te vas al aparteado que dice **Pull Request** en la parte superior de tu pantalla 
+     - Apretar en New pull request
+     - Elegir una rama base a la que se llevaran los cambios (a la izquierda) y la rama que se va a combinar (derecha).
+     - Darle un titulo y una descripción.
+     - Git Hub hara verificaciones y si no hay conflictos tu solicitud procedera.
+     - 
+## **¿Como hacer un buen PR?**
+- **Haz commits pequeños y significativos.**	Cada commit debe representar un cambio lógico y coherente. Esto facilita la revisión del código y la identificación de posibles errores.
+- **Describe claramente tu Pull Request.**	Al igual que con los mensajes de commit, la descripción de tu Pull Request debe explicar qué cambios hiciste, por qué son necesarios y cualquier detalle importante que los revisores deban saber.
+- **Sigue las convenciones del proyecto.**	Cada proyecto puede tener sus propias convenciones y guías de estilo. Asegúrate de seguir estas convenciones para mantener la coherencia del código.
+- **Actualiza tu rama antes de hacer el Pull Request.**	Antes de crear un Pull Request, asegúrate de que tu rama esté actualizada con la última versión de la rama a la que quieres fusionar tus cambios. Esto puede evitar conflictos de fusión.
+- **Prueba tus cambios.**	Antes de hacer un Pull Request, debes probar tus cambios para asegurarte de que funcionan como se espera y no introducen nuevos errores.
+- **Solicita revisiones de código.**	Solicita la revisión de tu código a tus compañeros de equipo. Ellos pueden ofrecerte valiosos comentarios y sugerencias para mejorar tu código.
