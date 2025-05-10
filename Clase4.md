@@ -147,4 +147,17 @@ Para porder subir los cambios a nuestro repositorio remoto usamos el **push**, u
 
   ## **Diferencias entre git push y git pull**
 
-  - **Git push.** Nos sirve para empujar cualquier cambio realizado del repositorio local al repositorio remoto.
+- **Git push.** Nos sirve para empujar cualquier cambio realizado del repositorio local al repositorio remoto.
+  Algunos comandos son:
+  
+   |Comandos |Función|
+  |--------|:------|
+  |git push| Sube los cambios confirmados (commits) de tu repositorio local al repositorio remoto. |
+  |git push --all| Sube todas las ramas del repositorio local al remoto.|
+  |git push -f| Fuerza la subida, sobrescribiendo el historial remoto con tu historial local.|
+  |git push -u origin < rama >|Sube la rama y la establece como predeterminada para futuros push y pull.|
+  |git push -d origin|Elimina la rama del repositorio remoto origin.|
+  |git push origin < rama1 > < rama2 > < ramaN >| Sube varias ramas (rama, rama1, rama2, ..., ramaN) al remoto origin en un solo comando.|
+ 
+ - **Git pull.** Nos sirve para descargar los cambios o modificaciones de el repositorio remoto al repositorio local.
+- 
